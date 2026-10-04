@@ -13,7 +13,7 @@ const UploadFile = () => {
     console.log(formData);
 
     axios
-      .post("http://localhost:3000/create-post", formData)
+      .post("https://gallery-appbackend.onrender.com/create-post", formData)
       .then((res) => {
         console.log(res);
       })
