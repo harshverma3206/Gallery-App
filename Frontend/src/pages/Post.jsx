@@ -7,7 +7,7 @@ const Post = () => {
   const [galleryItems, setGalleryItems] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:3000/")
+    axios.get("https://gallery-appbackend.onrender.com")
       .then((res) => {
         setGalleryItems(res.data.data);
       })
@@ -15,7 +15,7 @@ const Post = () => {
 
   const deleteItem = async (id) => {
     try {
-      await axios.delete(`http://localhost:3000/${id}`);
+      await axios.delete(`https://gallery-appbackend.onrender.com/${id}`);
     } catch (error) {
       console.error(error);
     }
